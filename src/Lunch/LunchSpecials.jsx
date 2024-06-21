@@ -39,10 +39,12 @@ function LunchSpecials() {
       <h2>Daily Lunch Specials</h2>
       <div className={styles["lunch-special-container"]}>
         {lunchSpecialsList.map((lunch, index) => (
-          <div className="lunch-special">
+          <div className={styles["lunch-special"]}>
             <img src={lunch.img} alt="" />
-            <p className={styles['lunch-name']}>{lunch.name}</p>
-            <p className={styles['lunch-name']}>Price: $7</p>
+            <div className={styles["description"]}>
+              <p className={styles["lunch-name"]}>{lunch.name}</p>
+              <p className={styles["lunch-name"]}>Price: $7</p>
+            </div>
           </div>
         ))}
       </div>
